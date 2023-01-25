@@ -2,6 +2,15 @@ const { db } = require('../firebase');
 const { Events, ActivityType} = require('discord.js');
 const moment = require('moment');
 const { FieldValue } = require('firebase-admin/firestore');
+const { get } = require("https")
+
+
+function updatePfp() {
+	client.user.setAvatar("https://github.com/robere2.png")
+		.then(user => console.debug(`${new Date()} Updated Avatar!`))
+		.catch(console.error);
+}
+
 
 module.exports = {
 	name: Events.ClientReady,
@@ -43,5 +52,8 @@ module.exports = {
 				}
 			})
 		}, 86400 * 1000);
+
+		updatePfp();
+		setInterval(updatePfp, 1000 * 60 * 60 * 24 * 7);
 	},
 };
