@@ -1,3 +1,7 @@
+# Notice: This project has been relocated to the [rpitv/glimpse](https://github.com/rpitv/glimpse) monorepo
+
+---
+
 # RPI TV Glimpse Discord
 An RPI TV Discord Bot that uses the Discord API and the Glimpse API intended to ease the operations in RPI TV.
 
